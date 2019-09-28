@@ -64,7 +64,6 @@ public class ProductPage01Tests extends BookInfoCommon {
 	public void test04getProductById(){
 		try {
 			Response response = msgSdr.getProductById(productId);
-			System.out.println(response);
 			assertTrue("calling test04getProductById(): ", response.getResponseCode()==HTTP_OK);
 			verifyProductDetails(response);
 		} catch (KeyManagementException | NoSuchAlgorithmException | IOException | ParseException e) {
